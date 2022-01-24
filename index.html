@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        /* display: flex;
+        flex-direction: column; */
+        width: 550px;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        text-align: center;
+        padding: 1rem 1rem;
+      }
+      input {
+        height: 20px;
+        width: 50px;
+        outline: none;
+      }
+      label{
+        width:50px;
+        font-weight: bold;
+      }
+      #secret {
+        width: 300px
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="container" >
+      <div class="section">
+        <label>Extension active</label>
+        <input type="checkbox" id="changeActive" checked/>
+      </div>
+      <div class="section">
+        <label>Secret Passphrase: </label>
+        <input type="text" id="secret" />  
+      </div>  
+    </div>
+    
+    <div>
+      Press ctrl+q to decode every encoded message on screen
+      <br> After you write a message press ctrl+alt+q to encode the message on place 
+    </div>
+
+    <script src=popup_script.js"></script>
+  </body>
+</html>

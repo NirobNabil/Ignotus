@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>nimbla - vodox</p>
+    <p>nimble - vodox</p>
+    <p id="data"> nimble </p>
+    <p id="debug" ></p>
+    <p id="debug2" ></p>
+    <input type="text" id="inp"/>
+    <button id="submit" > submit </button>
+    <div id="asd">
+
+    </div>
+    <script>
+        document.querySelector("#submit").onclick = function() {
+            var node = document.createElement("LI");                                                    // Create a <li> node
+            var textnode = document.createTextNode(document.querySelector("#inp").value);         // Create a text node
+            node.appendChild(textnode);                                                                 // Append the text to <li>
+            document.querySelector("#asd").appendChild(node);
+        }
+    </script>
+</body> 
+</html>
