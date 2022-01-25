@@ -72,6 +72,7 @@ function getDeepestChild(element) {
 }
 
 function keyDownListener(e) {
+    console.log("asdasdasd")
     if (!checkIfMatchKey(e.key)) return;
     keypressState[e.key] = true;
     // document.querySelector("#debug").textContent = JSON.stringify(keypressState);
@@ -135,6 +136,7 @@ var removeListeners = function () {
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request.command === "set_secret") {
         secret = request.secret;
+        console.log(secret);
     } else if (request.command === 'init') {
         addListeners();
     } else {

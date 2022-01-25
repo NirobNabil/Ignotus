@@ -1,7 +1,12 @@
 
 
 
-let secretKeyElem = document.getElementById("secret");
+let secretKeyElem = document.querySelector("#secret");
+
+chrome.storage.sync.get('secret', function (data) {
+  if(data.secret)
+    secretKeyElem.value = data.secret;
+});
 
 secretKeyElem.onchange = function (element) {
   const secret = this.value;
